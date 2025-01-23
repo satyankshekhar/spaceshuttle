@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+#game {
+    display: flex;
+    flex-direction: row;
+}
+#game_details {
+    width: 25vw;
+    background-color: rgba(37, 7, 7, 0.226);
+    padding: 30px;
+}
+.details {
+    background-color: rgba(59, 16, 59, 0.562);
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.details h1 {
+    color: greenyellow;
+    font-size: medium;
+    font-weight: 500;
+    margin: 5px 0;
+}
+#healthContainer {
+    background-color: rgba(72, 17, 17, 0.788);
+    height: 5vh;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 100%;
+}
+#healthValue {
+    background-color: rgba(255, 39, 39, 0.788);
+    height: 5vh;
+    border-radius: 5px;
+    width: 100%;
+}
+#game_console {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 70vw;
+    border: 2px solid white;
+    background-image: url("icons/space_backGround.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#player {
+    width:fit-content;
+    height:fit-content;
+    position: absolute;
+}
+.enemy {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.enemy_fire {
+    width: 40px;
+    height: 50px;
+    position: absolute;
+}
+.player_fire {
+    width: 40px;
+    height: 100px;
+    position: absolute;
+}
+.gameOver {
+    background-color: rgba(59, 16, 59, 0.562);
+    color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: 10vh;
+    height: 70vh;
+    width: 70vw;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.gameOver h1 {
+    color: greenyellow;
+    font-size: 40px;
+    font-weight: 500;
+}
+/* Responsive for max-width 1000px */
+@media screen and (max-width: 1000px) {
+    #game {
+        flex-direction: column;
+        height: 90vh;
+    }
+    #game_details {
+        width: 80vw;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        margin:auto;
+    }
+    .details {
+        flex-direction: column;
+        width: 50vw;
+        margin: auto;
+        margin-top: 10px;
+    }
+    #game_console {
+        width: 80vw;
+        height: 80vh;
+    }
+    .gameOver {
+        height: 30vh;
+        margin-top: 35vh;
+        width: 80vw;
+    }
+    .gameOver h1 {
+        font-size: 20px;
+    }
+}
